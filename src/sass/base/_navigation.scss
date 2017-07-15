@@ -3,7 +3,7 @@
 --------------------------------------------------------------*/
 
 .navigation-top {
-  background: $white1;
+  background: #fdfdfd;
   border-bottom: 1px solid $silver2;
   font-size: 16px;
   font-size: 1rem;
@@ -23,18 +23,30 @@
     }
   }
 
+  .nav-logo {
+    float: left;
+    background-image: url('assets/images/OhioPARC-nav-logo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 162px;
+    height: 49px;
+    vertical-align: middle;
+  }
+
   .wrap {
     max-width: 1000px;
     padding: 0;
   }
+
   a {
-    color: $black2;
+    color: $blue1;
     font-weight: 600;
     -webkit-transition: color 0.2s;
     transition: color 0.2s;
   }
+
   .current-menu-item > a, .current_page_item > a {
-    color: $gray1;
+    color: $green1;
   }
 }
 
@@ -157,7 +169,7 @@
 /* Dropdown Toggle */
 
 .dropdown-toggle {
-  background-color: transparent;
+  // background-color: transparent;
   border: 0;
   -webkit-box-shadow: none;
   box-shadow: none;

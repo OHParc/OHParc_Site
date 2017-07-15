@@ -56,10 +56,11 @@ body {
 }
 
 .site-description {
-  color: $gray3;
-  font-size: 13px;
-  font-size: 0.8125rem;
+  color: $white1;
+  font-size: 14px;
+  font-size: 0.9125rem;
   margin-bottom: 0;
+  text-shadow: 0px 2px 4px #000;
 }
 
 body {
@@ -73,10 +74,12 @@ body {
   display: inline-block;
   padding-right: 1em;
   vertical-align: middle;
+  text-align: center;
   width: auto;
+  margin-bottom: 25px;
   img {
     display: inline-block;
-    max-height: 80px;
+    max-height: 300px;
     width: auto;
   }
 }
@@ -267,4 +270,5 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
   display: table-cell;
   height: 100%;
   vertical-align: bottom;
+  text-align: center;
 }

@@ -22,10 +22,59 @@ $blue2: #21759b;
 
 $green1: #A4A73A;
 
+$sfdisplay: "SanFranciscoDisplay";
+$sftext: "SanFranciscoText";
+
+$sans-serif: $sfdisplay;
+$serif: $sftext;
+
+@mixin font-face(
+  $font-family,
+  $file-path,
+  $weight: normal,
+  $style: normal,
+  $directory: "fonts/") {
+
+  @font-face {
+    font-family: $font-family;
+    font-style: $style;
+    font-weight: $weight;
+    src: url('#{$directory}#{$file-path}.eot');
+    src: url('#{$directory}#{$file-path}.ttf') format('truetype');
+  }
+}
+
+@mixin font-faces(
+  $font-family,
+  $font-prefix,
+  $typefaces,
+  $directory: "fonts/") {
+
+  @each $weight, $style in $typefaces {
+    @include font-face(
+      $font-family,
+      "#{$font-prefix}-#{$style}",
+      $weight,
+      $style,
+      $directory
+    )
+  }
+}
+
+@include font-faces(
+  $sfdisplay, "SanFranciscoDisplay",
+  (300 Light, 500 Regular, 700 Bold)
+);
+
+@include font-faces(
+  $sftext, "SanFranciscoText",
+  (300 Light, 400 Medium, 500 Regular, 600 Semibold, 700 Bold)
+);
+
 // Fonts
-$font-family-base: sans-serif;
+$font-family-base: $sans-serif;
 $font-family-code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-$font-family-input: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
+$font-family-input: $sans-serif; //"Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
 $font-family-lang1: Tahoma, Arial, sans-serif;
 $font-family-lang2: "PingFang TC", "Helvetica Neue", Helvetica, STHeitiTC-Light, Arial, sans-serif;
 $font-family-lang3: "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
@@ -36,5 +85,5 @@ $font-family-lang7: "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
 $font-family-lang8: "Apple SD Gothic Neo", "Malgun Gothic", "Nanum Gothic", Dotum, sans-serif;
 $font-family-lang9: "Sukhumvit Set", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-family-mono: monospace, monospace;
-$font-family-placeholder: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
+$font-family-placeholder: $sans-serif; //"Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
 $font-family-pre: "Courier 10 Pitch", Courier, monospace;

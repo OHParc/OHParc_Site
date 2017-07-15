@@ -36,7 +36,7 @@
     margin-bottom: 0;
   }
   .has-header-image.twentyseventeen-front-page .site-branding, .has-header-video.twentyseventeen-front-page .site-branding, .has-header-image.home.blog .site-branding, .has-header-video.home.blog .site-branding {
-    bottom: 0;
+    bottom: 100px;
     display: block;
     left: 0;
     height: auto;
@@ -73,7 +73,7 @@
     top: 0;
   }
   .custom-logo-link {
-    padding-right: 2em;
+    //padding-right: 2em;
     img {
       max-width: 350px;
     }
@@ -93,8 +93,8 @@
     font-size: 2.25rem;
   }
   .site-description {
-    font-size: 16px;
-    font-size: 1rem;
+    font-size: 18px;
+    font-size: 1.25rem;
   }
   /* Navigation */
   .navigation-top {
